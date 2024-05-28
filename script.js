@@ -1,6 +1,34 @@
 // Code snippet data
 const codeSnippets = [
   {
+    title: "Hello World",
+    category: "GUI",
+    code:
+      `import javax.swing.*;
+import java.awt.*;
+
+public class HelloWorldGUI {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            createAndShowGUI();
+        });
+    }
+
+    private static void createAndShowGUI() {
+        JFrame frame = new JFrame("Hello World GUI");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JLabel label = new JLabel("Hello, World!");
+        label.setHorizontalAlignment(SwingConstants.CENTER);
+        frame.getContentPane().add(label, BorderLayout.CENTER);
+
+        frame.setSize(300, 200);
+        frame.setVisible(true);
+    }
+}`
+  },
+  
+  {
     title: "Library",
     category: "Object-oriented Programming",
     code: // BookDetails.java
